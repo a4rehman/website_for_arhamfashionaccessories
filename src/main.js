@@ -1,29 +1,66 @@
 import './style.css';
 
-// Professional Product Data (12 Professional Items)
+// 30 Professional Products (5 per Category)
 const products = [
-  { id: 1, name: "Card Embroidered Net Lace", price: 120, img: "/placeholder-lace.jpg", desc: "Elegant floral patterns for boutique suits." },
-  { id: 2, name: "Flower Design Shuttle Lace", price: 480, img: "/placeholder-lace.jpg", desc: "Premium quality shuttle lace for borders." },
-  { id: 3, name: "Golden Pearl Border", price: 300, img: "/placeholder-patches.jpg", desc: "Luxury pearl border for wedding wear." },
-  { id: 4, name: "Metallic Suiting Buttons", price: 15, img: "/placeholder-buttons.jpg", desc: "High-quality metal buttons for gents suits." },
-  { id: 5, name: "Velvet Fancy Patches", price: 150, img: "/placeholder-patches.jpg", desc: "Trend-setting velvet motifs for fashion." },
-  { id: 6, name: "Strong Rainbow Threads", price: 95, img: "/placeholder-threads.jpg", desc: "Durable stitching threads in multiple colors." },
-  { id: 7, name: "Silicone Liquid Glue", price: 180, img: "/placeholder-threads.jpg", desc: "Industrial strength fabric glue for tailor work." },
-  { id: 8, name: "Elastic Roll Professional", price: 250, img: "/placeholder-lace.jpg", desc: "High-elasticity white roll for boutiques." },
-  { id: 9, name: "Crystal Zigzag Chain", price: 1800, img: "/placeholder-lace.jpg", desc: "Premium sparkling rhinestone design chain." },
-  { id: 10, name: "Fancy Tassel Latkan Pair", price: 450, img: "/placeholder-patches.jpg", desc: "Elegant handmade tassels for dress backs." },
-  { id: 11, name: "Tailoring Essential Kit", price: 80, img: "/placeholder-buttons.jpg", desc: "Measuring tape and professional chalk set." },
-  { id: 12, name: "Double Side Border Lace", price: 300, img: "/placeholder-lace.jpg", desc: "Versatile double-sided shuttle lace." }
+  // LACES
+  { id: 1, category: "laces", name: "Card Embroidered Net Lace", price: 120, img: "/placeholder-lace.jpg", desc: "Elegant floral patterns for boutique suits." },
+  { id: 2, category: "laces", name: "Flower Design Shuttle Lace", price: 480, img: "/placeholder-lace.jpg", desc: "Premium quality shuttle lace for borders." },
+  { id: 3, category: "laces", name: "Cotton Crochet Lace", price: 85, img: "/placeholder-lace.jpg", desc: "Pure white cotton crochet lace for summer wear." },
+  { id: 4, category: "laces", name: "GPO Fancy White Lace", price: 150, img: "/placeholder-lace.jpg", desc: "Heavy GPO lace for designer necklines." },
+  { id: 5, category: "laces", name: "Double Side Border Lace", price: 300, img: "/placeholder-lace.jpg", desc: "Versatile double-sided shuttle lace." },
+
+  // BORDERS
+  { id: 6, category: "borders", name: "Golden Pearl Border", price: 350, img: "/placeholder-patches.jpg", desc: "Luxury pearl border for wedding wear." },
+  { id: 7, category: "borders", name: "Silver Zari Work Border", price: 280, img: "/placeholder-patches.jpg", desc: "Antique silver zari work for heavy dupattas." },
+  { id: 8, category: "borders", name: "Multi-color Thread Border", price: 200, img: "/placeholder-patches.jpg", desc: "Vibrant thread embroidery on velvet base." },
+  { id: 9, category: "borders", name: "Mirror Work Fashion Border", price: 450, img: "/placeholder-patches.jpg", desc: "Traditional mirror work border for party wear." },
+  { id: 10, category: "borders", name: "Crystal Zigzag Chain", price: 1800, img: "/placeholder-lace.jpg", desc: "Premium sparkling rhinestone design chain." },
+
+  // BUTTONS
+  { id: 11, category: "buttons", name: "Metallic Suiting Buttons", price: 15, img: "/placeholder-buttons.jpg", desc: "High-quality metal buttons for gents suits." },
+  { id: 12, category: "buttons", name: "Signature Pearl Buttons", price: 25, img: "/placeholder-buttons.jpg", desc: "Elegant marble finish pearl buttons for shirts." },
+  { id: 13, category: "buttons", name: "Crystal Dress Buttons", price: 45, img: "/placeholder-buttons.jpg", desc: "Shining crystal buttons for ladies fashion." },
+  { id: 14, category: "buttons", name: "Wooden Ethnic Buttons", price: 10, img: "/placeholder-buttons.jpg", desc: "Natural wood buttons for casual kurtas." },
+  { id: 15, category: "buttons", name: "Golden Blazer Buttons", price: 35, img: "/placeholder-buttons.jpg", desc: "Premium embossed golden buttons for coats." },
+
+  // THREADS
+  { id: 16, category: "threads", name: "Strong Rainbow Threads", price: 95, img: "/placeholder-threads.jpg", desc: "Durable stitching threads in multiple colors." },
+  { id: 17, category: "threads", name: "Polyester Overlock Thread", price: 120, img: "/placeholder-threads.jpg", desc: "Large cone high-speed overlock thread." },
+  { id: 18, category: "threads", name: "Metallic Embroidery Thread", price: 65, img: "/placeholder-threads.jpg", desc: "Gold and Silver Tilla work threads." },
+  { id: 19, category: "threads", name: "Nylon Invisible Thread", price: 40, img: "/placeholder-threads.jpg", desc: "Transparent nylon thread for patchwork." },
+  { id: 20, category: "threads", name: "Cotton Stitching Set", price: 180, img: "/placeholder-threads.jpg", desc: "Pack of 12 multi-color cotton thread spools." },
+
+  // PATCHES
+  { id: 21, category: "patches", name: "Velvet Fancy Patches", price: 150, img: "/placeholder-patches.jpg", desc: "Trend-setting velvet motifs for fashion." },
+  { id: 22, category: "patches", name: "Ethnic Peacock Motif", price: 550, img: "/placeholder-patches.jpg", desc: "Large embroidered peacock patch for back design." },
+  { id: 23, category: "patches", name: "Floral Patchwork Set", price: 250, img: "/placeholder-patches.jpg", desc: "Small rose motifs for sleeve decoration." },
+  { id: 24, category: "patches", name: "Beaded Fashion Emblem", price: 380, img: "/placeholder-patches.jpg", desc: "Hand-beaded emblem for designer jackets." },
+  { id: 25, category: "patches", name: "Fancy Tassel Latkan Pair", price: 450, img: "/placeholder-patches.jpg", desc: "Elegant handmade tassels for dress backs." },
+
+  // TOOLS
+  { id: 26, category: "tools", name: "Silicone Liquid Glue", price: 180, img: "/placeholder-threads.jpg", desc: "Industrial strength fabric glue for tailor work." },
+  { id: 27, category: "tools", name: "Professional Tailor Scissors", price: 1200, img: "/placeholder-buttons.jpg", desc: "Large 10-inch sharp steel cutting scissors." },
+  { id: 28, category: "tools", name: "Measuring Tape & Chalk Kit", price: 80, img: "/placeholder-buttons.jpg", desc: "Standard 60-inch tape and tailor's chalk set." },
+  { id: 29, category: "tools", name: "Hand Needle Assortment", price: 50, img: "/placeholder-buttons.jpg", desc: "Pack of 20 needles for various fabric types." },
+  { id: 30, category: "tools", name: "Elastic Roll White (1 inch)", price: 250, img: "/placeholder-lace.jpg", desc: "High-elasticity white roll for boutiques." }
 ];
 
 let cart = JSON.parse(localStorage.getItem('arham_cart')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Render Products on Shop Page
+  // --- 1. Filter Logic & Rendering ---
   const shopGrid = document.getElementById('shop-grid');
-  if (shopGrid) {
-    shopGrid.innerHTML = products.map(p => `
+  const categoryLinks = document.querySelectorAll('.category-list a');
+
+  function renderProducts(cat = 'all') {
+    if (!shopGrid) return;
+
+    const filtered = cat === 'all'
+      ? products
+      : products.filter(p => p.category === cat);
+
+    shopGrid.innerHTML = filtered.map(p => `
             <div class="product-card cat-card animate-up" style="padding:0; overflow:hidden;">
                 <div class="product-img gallery-item" style="height:200px;">
                     <img src="${p.img}" alt="${p.name}">
@@ -40,9 +77,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `).join('');
+
+    // Trigger reveal for new products
+    document.querySelectorAll('.animate-up').forEach(el => revealObserver.observe(el));
   }
 
-  // 2. Cart Drawer Toggles
+  // Read URL for initial category filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialCat = urlParams.get('cat') || 'all';
+  renderProducts(initialCat);
+
+  // Sidebar Filtering
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cat = link.dataset.cat || 'all';
+
+      // UI Update
+      categoryLinks.forEach(l => l.style.color = '');
+      categoryLinks.forEach(l => l.querySelector('i').className = 'fa-solid fa-chevron-right');
+
+      link.style.color = 'var(--primary)';
+      link.querySelector('i').className = 'fa-solid fa-arrow-right';
+
+      renderProducts(cat);
+    });
+  });
+
+  // --- 2. Cart Drawer Toggles ---
   const cartBtn = document.getElementById('cart-toggle');
   const cartClose = document.getElementById('cart-close');
   const cartDrawer = document.getElementById('cart-drawer');
@@ -64,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Add to Cart Logic
+  // --- 3. Add to Cart Logic ---
   document.addEventListener('click', (e) => {
     if (e.target.closest('.btn-add-cart')) {
       const id = parseInt(e.target.closest('.btn-add-cart').dataset.id);
@@ -140,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartTotal.innerText = total.toFixed(2) + ' Rs.';
   }
 
-  // 4. WhatsApp Checkout
+  // --- 4. WhatsApp Checkout ---
   const checkoutBtn = document.getElementById('whatsapp-checkout');
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
@@ -163,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCartUI();
 
-  // 5. General Scroll Animations
+  // --- 5. General Scroll Animations ---
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
